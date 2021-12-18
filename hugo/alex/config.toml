@@ -1,4 +1,4 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'Meins!'
+# title = 'Meins!'
 theme = "ananke"
