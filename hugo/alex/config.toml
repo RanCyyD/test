@@ -9,7 +9,7 @@ googleAnalytics = ""
     author = "Calin Tataru"
     description = "Personal blog theme powered by Hugo"
     githubUsername = "#"
-    accent = "red"
+    accent = "green"
     showBorder = true
     backgroundColor = "white"
     font = "Raleway" # should match the name on Google Fonts!
@@ -28,12 +28,12 @@ googleAnalytics = ""
     weight = 2
 
 [[menu.main]]
-    url = "/post/"
+    url = "/posts/"
     name = "Posts"
     weight = 3
 
 [[menu.main]]
-    url = "/project/"
+    url = "/projects/"
     name = "Projects"
     weight = 4
 
@@ -49,19 +49,19 @@ googleAnalytics = ""
 [[menu.icon]]
     url = "https://github.com/username/"
     name = "fab fa-github"
-    weight = 2
+    weight = 5
 
 [[menu.icon]]
     url = "https://twitter.com/username/"
     name = "fab fa-twitter"
-    weight = 3
+    weight = 2
 
 [[menu.icon]]
     url = "https://www.linkedin.com/in/username/"
     name = "fab fa-linkedin"
-    weight = 4
+    weight = 3
 
 [[menu.icon]]
     url = "https://www.stackoverflow.com/username/"
-    name = "fab fa-stack-overflow"
-    weight = 5
+    name = "fab fa-xing"
+    weight = 4
