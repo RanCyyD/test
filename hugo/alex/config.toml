@@ -1,13 +1,14 @@
-baseURL = "http://example.com/"
+baseURL = ""
 languageCode = "en-us"
-title = "Minimal"
+# title = "Minimal"
 theme = "minimal"
 disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
     author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
+    profilePic = "images/E26514.jpg"
+    description = "Kurz über Alexander Jann"
     githubUsername = "#"
     accent = "green"
     showBorder = true
@@ -42,26 +43,26 @@ googleAnalytics = ""
 # The list of available icons can be found at http://fontawesome.io/icons.
 
 [[menu.icon]]
-    url = "mailto:me@example.com"
+    url = "mailto:info@alexanderjann.de"
     name = "fas fa-envelope"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/username/"
+    url = "https://github.com/rancyyd/"
     name = "fab fa-github"
     weight = 5
 
 [[menu.icon]]
-    url = "https://twitter.com/username/"
+    url = "https://twitter.com/cyy_ran/"
     name = "fab fa-twitter"
     weight = 2
 
 [[menu.icon]]
-    url = "https://www.linkedin.com/in/username/"
+    url = "https://www.linkedin.com/in/alexanderjann/"
     name = "fab fa-linkedin"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.stackoverflow.com/username/"
+    url = "https://www.xing.com/profile/Alexander_Jann"
     name = "fab fa-xing"
     weight = 4

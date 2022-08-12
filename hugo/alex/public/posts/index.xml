@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Dec 2021 18:06:08 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zum Einstieg</title>
+      <link>/posts/alex_start/</link>
+      <pubDate>Thu, 16 Dec 2021 18:06:08 +0100</pubDate>
+      
+      <guid>/posts/alex_start/</guid>
+      <description> Das hier dient mal als test Noch ein Blalalala bumsfallera  </description>
+    </item>
+    
+  </channel>
+</rss>

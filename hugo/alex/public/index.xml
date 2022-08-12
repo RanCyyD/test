@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Dec 2021 18:59:02 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Erstes_project</title>
+      <link>/projects/erstes_project/</link>
+      <pubDate>Mon, 20 Dec 2021 18:59:02 +0100</pubDate>
+      
+      <guid>/projects/erstes_project/</guid>
+      <description> hier mal starten  </description>
+    </item>
+    
+    <item>
+      <title>Zum Einstieg</title>
+      <link>/posts/alex_start/</link>
+      <pubDate>Thu, 16 Dec 2021 18:06:08 +0100</pubDate>
+      
+      <guid>/posts/alex_start/</guid>
+      <description> Das hier dient mal als test Noch ein Blalalala bumsfallera  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again. Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors.</description>
+    </item>
+    
+  </channel>
+</rss>
