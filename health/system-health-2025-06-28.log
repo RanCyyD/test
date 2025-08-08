@@ -1,0 +1,55 @@
+============================================
+ System Health Report for tyr4
+ Generated on: Sat Jun 28 09:49:26 AM CEST 2025
+============================================
+
+Disk Usage:
+Filesystem           Size       Used       Avail      Use%   Mounted on
+tmpfs           3,2G   11M  3,2G   1% /run
+efivarfs        384K  214K  166K  57% /sys/firmware/efi/efivars
+/dev/sda7        66G   22G   42G  34% /
+tmpfs            16G   58M   16G   1% /dev/shm
+tmpfs           5,0M  8,0K  5,0M   1% /run/lock
+tmpfs            16G     0   16G   0% /run/qemu
+/dev/sda10      164G   74G   81G  48% /home
+/dev/sda1       496M   64M  433M  13% /boot/efi
+overlay          66G   22G   42G  34% /var/lib/docker/overlay2/d7192a2a0645ea205fdfab77b3753d0d985a3a1a1f6ca4a5236c2584a7bff328/merged
+overlay          66G   22G   42G  34% /var/lib/docker/overlay2/53410cbb19b52ce9a7302ece0cb3ad5fa9a63e568980dc8611be10c2493ce945/merged
+overlay          66G   22G   42G  34% /var/lib/docker/overlay2/e76e74976a9231d4a5ef04b3c598d9f46412b55ed82d7eeb23dda498c30ab913/merged
+tmpfs           3,2G  168K  3,2G   1% /run/user/1000
+
+CPU Load (1/5/15 min average):
+   0,20, 0,32, 0,27
+
+Memory Usage:
+  total      used       free       shared     buff/cache available 
+  Mem:       31Gi       3,0Gi      25Gi       471Mi      3,5Gi     
+  Swap:      4,9Gi      0B         4,9Gi                           
+
+Failed Systemd Services:
+  ● casper-md5check.service loaded failed failed casper-md5check Verify Live ISO checksums
+
+Top 5 Memory Consuming Processes:
+  USER       PID    %CPU   %MEM   COMMAND
+  rancyyd    46414  0.3    1.3    /opt/google/chrome/chrome --type=renderer --string-annotatio
+  rancyyd    43671  2.1    1.1    /opt/google/chrome/chrome
+  rancyyd    43808  0.6    0.6    /opt/google/chrome/chrome --type=renderer --string-annotatio
+  rancyyd    450123 1.0    0.6    evolution -c current
+  rancyyd    46356  0.1    0.6    /opt/google/chrome/chrome --type=renderer --string-annotatio
+
+Top 5 CPU Consuming Processes:
+  USER       PID    %CPU   %MEM   COMMAND
+  root       499237 100    0.0    ps -eo user,pid,%cpu,%mem,command --sort=-%cpu
+  rancyyd    493199 3.6    0.0    zsh
+  root       1250   3.1    0.0    /usr/sbin/preload -s /var/lib/preload/preload.state
+  root       4841   2.8    0.3    /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/light
+  rancyyd    43671  2.1    1.1    /opt/google/chrome/chrome
+
+System Uptime:
+  up 1 hour, 14 minutes
+
+Available Package Updates:
+  google-chrome-stable/stable 138.0.7204.49-1 amd64 [upgradable from: 133.0.6943.126-1]
+  ubuntu-drivers-common/noble-updates 1:0.9.7.6ubuntu3.2 amd64 [upgradable from: 1:0.9.7.6ubuntu3.1]
+
+End of Report
