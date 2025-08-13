@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Britta Huse-Dürrast - Professionelle Weiterbildung für Pflegekräfte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2980b9;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2980b9;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2980b9;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.2s;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.4s;
+            font-weight: 300;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.6s;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;         
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+        }
+
+        .credentials {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #2980b9;
+        }
+
+        .credentials h4 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .credentials ul {
+            list-style: none;
+        }
+
+        .credentials li {
+            padding: 5px 0;
+            color: #5a6c7d;
+        }
+
+        .credentials li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: left 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #2980b9;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Target Group Section */
+        .target-group {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .target-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .target-item:hover {
+            background: white;
+            border-color: #2980b9;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .target-item h4 {
+            color: #2980b9;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .email-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #5dade2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+        }
+
+        /* Impressum Section */
+        .impressum {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .impressum-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .impressum h3 {
+            color: #2980b9;
+            margin: 30px 0 15px 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+
+        .impressum h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .impressum p, .impressum address {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #2c3e50;
+        }
+
+        .impressum address {
+            font-style: normal;
+        }
+
+        .impressum strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">s-agil Britta Huse-Dürrast</div>
+            <ul class="nav-links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#services">Leistungen</a></li>
+                <li><a href="#target">Zielgruppe</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professionelle Weiterbildung für Pflegekräfte</h1>
+                <p class="subtitle">Sozialpädagogin • Trainerin • Expertin für Pflege</p>
+                <p class="tagline">Ich unterstütze Pflegekräfte und Altenheime dabei, ihre professionellen Kompetenzen zu erweitern und den Herausforderungen des Pflegealltags mit Fachwissen und Empathie zu begegnen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">Über mich</h2>
+            <p class="section-subtitle fade-in">Ihre Partnerin für professionelle Entwicklung im Pflegebereich</p>
+            
+            <div class="about-grid fade-in">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="britta_rund.jpeg" alt="Britta Huse-Dürrast">
+                    </div>
+                    <h3>Britta Huse-Dürrast</h3>
+                    <p>Sozialpädagogin, Zukunftsdesignerin & Trainerin</p>
+                    
+                    <div class="credentials">
+                        <h4>Qualifikationen</h4>
+                        <ul>
+                            <li>Diplom in Sozialwissenschaften</li>
+                            <li>Master in Zukunftsdesign</li>
+                            <li>Zertifizierte Trainerin</li>
+                            <li>15+ Jahre Berufserfahrung</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <p>Mit über 15 Jahren Erfahrung in der Sozialpädagogik bringe ich fundiertes Fachwissen und praktische Expertise in die Weiterbildung von Pflegekräften ein. Meine Leidenschaft liegt darin, professionelle Kompetenzen zu stärken und dabei die menschliche Seite der Pflege nicht aus den Augen zu verlieren.</p>
+                    
+                    <p>Als promovierte Sozialpädagogin verstehe ich die komplexen Herausforderungen, denen sich Pflegekräfte täglich stellen müssen. Meine Trainings verbinden wissenschaftlich fundierte Methoden mit praxisnahen Ansätzen, die sich direkt im Arbeitsalltag umsetzen lassen.</p>
+                    
+                    <p>Mein Ziel ist es, Pflegekräfte dabei zu unterstützen, nicht nur fachlich, sondern auch persönlich zu wachsen und dabei ihre wichtige gesellschaftliche Rolle mit Professionalität und Würde auszufüllen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Meine Leistungen</h2>
+            <p class="section-subtitle fade-in">Maßgeschneiderte Weiterbildungen für Ihre Bedürfnisse</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎓</div>
+                    <h3>Kommunikations-training</h3>
+                    <p>Professionelle Gesprächsführung mit Patienten, Angehörigen und im Team. Deeskalationstechniken und empathische Kommunikation stehen im Mittelpunkt.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">💪</div>
+                    <h3>Stressmanagement & Resilienz</h3>
+                    <p>Strategien zur Bewältigung beruflicher Belastungen, Burnout-Prävention und Aufbau psychischer Widerstandskraft im Pflegealltag.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🤝</div>
+                    <h3>Teambuilding & Konfliktlösung</h3>
+                    <p>Förderung der Zusammenarbeit im Team, konstruktive Konfliktbearbeitung und Entwicklung einer positiven Arbeitsatmosphäre.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">📚</div>
+                    <h3>Fachliche Weiterbildung</h3>
+                    <p>Aktuelle Entwicklungen in der Pflege, rechtliche Grundlagen und evidenzbasierte Pflegemethoden - praxisnah vermittelt.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">👥</div>
+                    <h3>Führungskräfte-Coaching</h3>
+                    <p>Spezielle Programme für Pflegeleitung und Führungskräfte in Altenheimen zur Personalentwicklung und Mitarbeiterführung.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏥</div>
+                    <h3>Organisations-entwicklung</h3>
+                    <p>Beratung bei der Optimierung von Arbeitsabläufen, Qualitätssicherung und der Implementierung neuer Pflegekonzepte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Group Section -->
+    <section id="target" class="target-group">
+        <div class="container">
+            <h2 class="section-title fade-in">Meine Zielgruppe</h2>
+            <p class="section-subtitle fade-in">Wer profitiert von meinen Trainings?</p>
+            
+            <div class="target-grid">
+                <div class="target-item fade-in">
+                    <h4>Pflegekräfte</h4>
+                    <p>Fachkräfte aller Qualifikationsstufen, die ihre beruflichen Kompetenzen erweitern und sich persönlich weiterentwickeln möchten.</p>
+                </div>
+                
+                <div class="target-item fade-in">
+                    <h4>Altenheime</h4>
+                    <p>Pflegeeinrichtungen, die ihre Mitarbeiter fortbilden und die Qualität der Betreuung kontinuierlich verbessern wollen.</p>
+                </div>
+                
+                <div class="target-item fade-in">
+                    <h4>Pflegeleitung</h4>
+                    <p>Führungskräfte, die ihre Teams effektiv leiten und eine positive Arbeitskultur schaffen möchten.</p>
+                </div>
+                
+                <div class="target-item fade-in">
+                    <h4>Pflegeschulen</h4>
+                    <p>Bildungseinrichtungen, die praxisnahe Inhalte in ihre Ausbildungsprogramme integrieren wollen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title fade-in" style="color: white;">Kontakt</h2>
+                <p class="section-subtitle fade-in" style="color: #bdc3c7;">Lassen Sie uns über Ihre Weiterbildungsbedarfe sprechen</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📧</div>
+                        <h4>E-Mail</h4>
+                        <a href="mailto:s.mueller@pflegetraining.de" class="email-link">info@s-agil.de</a>
+                    </div>
+                    
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📱</div>
+                        <h4>Telefon</h4>
+                        <p>+49 (0) 911 123456789</p>
+                    </div>
+                    
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon">📍</div>
+                        <h4>Standort</h4>
+                        <p>Fürth, Bayern<br>Deutschlandweit tätig</p>
+                    </div>
+
+                     <div class="contact-item fade-in">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                            </svg>
+                        </div>
+                        <h4>Linkedin</h4>
+                        <p>Fürth, Bayern<br>Deutschlandweit tätig</p>
+                    </div>
+                </div>
+                
+                <a href="mailto:info@s-agil.de?subject=Anfrage Weiterbildung" class="cta-button fade-in">
+                    Unverbindliche Anfrage senden
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impressum Section -->
+    <section id="impressum" class="impressum">
+        <div class="container">
+            <h2 class="section-title fade-in">Impressum</h2>
+            
+            <div class="impressum-content fade-in">
+                <h3>Angaben gemäß § 5 TMG</h3>
+                <address>
+                    <strong>Britta Huse-Dürrast</strong><br>
+                    Weiterbildung für Pflegekräfte<br>
+                    Musterstraße 123<br>
+                    90762 Fürth<br>
+                    Deutschland
+                </address>
+
+                <h3>Kontakt</h3>
+                <p>
+                    <strong>Telefon:</strong> +49 (0) 911 123456789<br>
+                    <strong>E-Mail:</strong> info@s-agil.de
+                </p>
+
+                <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
+                <p>
+                    <strong>Berufsbezeichnung:</strong> Diplom-Sozialpädagogin<br>
+                    <strong>Zuständige Kammer:</strong> Bayerische Landesärztekammer<br>
+                    <strong>Verliehen in:</strong> Deutschland
+                </p>
+
+                <h3>Redaktionell verantwortlich</h3>
+                <address>
+                    Britta Huse-Dürrast<br>
+                    Musterstraße 123<br>
+                    90762 Fürth
+                </address>
+
+                <h3>EU-Streitschlichtung</h3>
+                <p>
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+                    <a href="https://ec.europa.eu/consumers/odr/" target="_blank" style="color: #2980b9;">https://ec.europa.eu/consumers/odr/</a><br>
+                    Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                </p>
+
+                <h3>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h3>
+                <p>
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
+                    Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+
+                <h3>Haftung für Inhalte</h3>
+                <p>
+                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
+                    nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als 
+                    Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte 
+                    fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine 
+                    rechtswidrige Tätigkeit hinweisen.
+                </p>
+
+                <h3>Haftung für Links</h3>
+                <p>
+                    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen 
+                    Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. 
+                    Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der 
+                    Seiten verantwortlich.
+                </p>
+
+                <h3>Urheberrecht</h3>
+                <p>
+                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen 
+                    dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art 
+                    der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen 
+                    Zustimmung des jeweiligen Autors bzw. Erstellers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Britta Huse-Dürrast - Professionelle Weiterbildung für Pflegekräfte. Alle Rechte vorbehalten. | 
+               <a href="#impressum" style="color: #3498db; text-decoration: none;">Impressum</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
