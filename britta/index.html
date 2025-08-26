@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Oktober 2025</title>
+    <style>
+        * {
+            margin: 0;
+            <padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #20B2AA, #48CAE4);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .main-title {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
+        }
+        
+        .email-banner {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .email-banner h3 {
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        
+        .email-banner a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+        
+        .email-banner a:hover {
+            border-bottom-color: white;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .impressum-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .impressum-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Modal für Impressum */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            color: #333;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .close:hover {
+            color: #20B2AA;
+        }
+        
+        .modal h2 {
+            color: #20B2AA;
+            margin-bottom: 1rem;
+        }
+        
+        .modal p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .email-banner {
+                margin: 2rem 1rem;
+                padding: 1rem;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Start Oktober 2025</h1>
+        
+        <div class="email-banner">
+            <h3>Kontakt</h3>
+            <a href="mailto:info@s-agil.de">info@s-agil.de</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="#" class="impressum-link" onclick="openModal()">Impressum</a>
+    </div>
+    
+    <!-- Modal für Impressum -->
+    <div id="impressumModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Impressum</h2>
+            <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+            <p>
+                Britta Huse-Dürrast<br>
+                Kreuzwehrstraße 15<br>
+                96450 Coburg<br>
+                Deutschland
+            </p>
+            <p><strong>Kontakt:</strong></p>
+            <p>
+                E-Mail: info@s-agil.de
+            </p>
+            <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong></p>
+            <p>
+                Britta Huse-Dürrast<br>
+                Kreuzwehrstraße 15<br>
+                96450 Coburg<br>
+                Deutschland
+            </p>
+            <p><strong>Haftungsausschluss:</strong></p>
+            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+        </div>
+    </div>
+    
+    <script>
+        function openModal() {
+            document.getElementById('impressumModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('impressumModal').style.display = 'none';
+        }
+        
+        // Modal schließen beim Klick außerhalb
+        window.onclick = function(event) {
+            const modal = document.getElementById('impressumModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // ESC-Taste zum Schließen
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
