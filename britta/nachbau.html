@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Britta Huse-Dürrast – S.AGIL</title>
+  <!-- Google Fonts für ähnliche Schriftarten -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      border-bottom: 2px solid #ccc;
+      padding: 14px 0;
+      background: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #111;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+    .navbar a:hover {
+      color: #1a65ba;
+    }
+    .main-title {
+      text-align: center;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    .logo-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  margin: 28px 0 12px 0;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sagil-logo {
+  position: relative;
+  border: 2px solid #222;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.center-logo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 7px;
+}
+.circle-text {
+  position: absolute;
+  width: 145px;
+  height: 145px;
+  top: 0;
+  left: 0;
+  font-size: 0.93rem;
+  text-align: center;
+  line-height: 145px;
+  pointer-events: none;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transform: rotate(-20deg); /* Optisch wie im Screenshot */
+}
+.build-note {
+  margin: 3px 0 3px 0;
+  color: #d10808;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.request-btn {
+  background: #111;
+  color: #fff;
+  border-radius: 30px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  padding: 12px 24px;
+  box-shadow: 2px 3px 10px rgba(0,0,0,.13);
+  font-size: 1.13rem;
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.img-col .profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0,0,0,.09);
+}
+
+    }
+    .section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin: 34px 0 16px 0;
+      text-align: left;
+      letter-spacing: 1px;
+    }
+    .columns {
+      display: flex;
+      gap: 40px;
+      margin: 0 8%;
+      padding-top: 16px;
+    }
+    .col {
+      flex: 1;
+      font-size: 1.12rem;
+      line-height: 1.68;
+    }
+    .impressum-link {
+      display: block;
+      text-align: right;
+      margin: 44px 8% 20px 0;
+      cursor: pointer;
+      color: #222;
+      font-size: 1rem;
+      text-decoration: underline;
+    }
+    .impressum-box {
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 26px;
+      margin: 0 8% 38px 8%;
+      box-shadow: 0 2px 10px rgba(0,0,0,.04);
+      font-size: 1rem;
+      position: relative;
+    }
+    .close-impressum {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #eaeaea;
+      border: none;
+      font-size: 1.11rem;
+      color: #555;
+      cursor: pointer;
+      padding: 4px 12px;
+      border-radius: 7px;
+      font-family: inherit;
+    }
+    @media (max-width: 900px) {
+      .columns {
+        flex-direction: column;
+      }
+      .profile-img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+      }
+      .logo-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Über Mich</a>
+    <a href="#">Leistungen</a>
+    <a href="#">Projekte</a>
+    <a href="#">Reviews</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+  <div class="main-title">BRITTA HUSE-DÜRRAST</div>
+
+<div class="logo-row">
+  <div class="logo-col">
+    <div class="sagil-logo">
+      <span class="circle-text">BRITTA HUSE-DÜRRAST</span>
+      <span class="center-logo">S.AGIL</span>
+    </div>
+    <div class="build-note">Seite befindet sich noch im Aufbau- demnächst mehr</div>
+    <a class="request-btn" href="#">JETZT ANFRAGEN</a>
+  </div>
+  <div class="img-col">
+    <img src="britta-Huse-Durrast-_1.jpg" alt="Profilbild" class="profile-img">
+  </div>
+</div>
+
+  <div class="section-title">
+    AGILE TRANFORMATION IN SOZIALUNTERNEHMEN <br>
+    DOZENTIN FÜR SCHULUNGEN NACH §43B SGB XI
+  </div>
+
+  <div class="columns">
+    <div class="col" style="border-right:1px solid #ccc; padding-right:28px;">
+      Die Sozialbranche durchlebt einen enormen Wandel, die moderne Arbeitsformen erfordern.<br><br>
+      Viele Sozialunternehmen stehen vor der Herausforderung ihre gewachsenen Strukturen zu transformieren, ohne die Qualität ihrer Arbeit zu gefährden.<br><br>
+      Ich begleite Führungskräfte und Teams bei genau diesen Transformationen. Durch agile, praxis­erprobte Workshops und individuelle Beratung entwickeln wir selbst organisierte Teams und effiziente Strukturen, die sowohl den neuen Anforderungen gerecht werden, als auch die sozialpädagogischen Werte bewahren.
+    </div>
+    <div class="col">
+      Sie möchten, dass Ihre Betreuung den Senioren mehr Lebensfreude bringt?<br><br>
+      Ich bringe als ehemalige Koordinatorin für Beschäftigung in einer großen Senioreneinrichtung mit Tagespflege, ambulanten, vollstationären und Demenz­bereich praxis­erprobte Konzepte mit. Als langjährige FQA-Auditorin kenne ich zudem die Heimaufsicht­anforderungen.<br><br>
+      Zusammen mit Ihrem Team entwickle ich neue Angebote für mehr Lebensqualität für die Seniorinnen und Bewohner.<br>
+      Vor Ort, nachhaltig und umsetzbar.
+    </div>
+  </div>
+
+  <a class="impressum-link" onclick="document.getElementById('impressum').style.display='block';">Impressum anzeigen</a>
+  <div id="impressum" class="impressum-box">
+    <button class="close-impressum" onclick="document.getElementById('impressum').style.display='none';">Schließen</button>
+    <strong>Impressum</strong><br>
+    Britta Huse-Dürrast<br>
+    S.AGIL – Agile Transformation Sozialunternehmen<br>
+    Musterstraße 12, 12345 Musterstadt<br>
+    Telefon: 01234/567890<br>
+    E-Mail: britta@huseduerrast.de<br><br>
+    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: <br>
+    Britta Huse-Dürrast<br><br>
+    Hinweis: Dies ist eine Beispielseite im Aufbau, die Daten sind fiktiv.
+  </div>
+</body>
+</html>
